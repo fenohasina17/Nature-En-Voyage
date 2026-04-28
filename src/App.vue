@@ -24,6 +24,7 @@ import {
 const commonsImage = (file, width = 1200) =>
   `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(file)}?width=${width}`
 
+const logoImage = '/logo-nature-en-voyage.png'
 const heroImage = commonsImage('Avenue of the Baobabs, central axis.jpg', 1600)
 
 const provinces = [
@@ -434,12 +435,15 @@ const bookingMessage = computed(() => {
 })
 
 const whatsappUrl = computed(
-  () => `https://wa.me/261341234567?text=${encodeURIComponent(bookingMessage.value)}`,
+  () =>
+    `https://wa.me/261349852252?text=${encodeURIComponent(
+      `Bonjour, je souhaite reserver un trajet avec Nature en Voyage. Voici les details :\n\n${bookingMessage.value}`,
+    )}`,
 )
 
 const mailUrl = computed(
   () =>
-    `mailto:booking@natureenvoyage.mg?subject=${encodeURIComponent('Reservation Nature en Voyage')}&body=${encodeURIComponent(bookingMessage.value)}`,
+    `mailto:natureenvoyage@gmail.com?subject=${encodeURIComponent('Reservation Nature en Voyage')}&body=${encodeURIComponent(bookingMessage.value)}`,
 )
 
 const chooseVehicle = (vehicleId) => {
@@ -469,9 +473,11 @@ const submitBooking = () => {
     <header class="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-ink/85 text-white backdrop-blur">
       <div class="section-shell flex h-16 items-center justify-between">
         <a href="#top" class="flex items-center gap-3 focus-ring rounded-md">
-          <span class="grid h-9 w-9 place-items-center rounded-md bg-ember text-ink">
-            <CarFront class="h-5 w-5" aria-hidden="true" />
-          </span>
+          <img
+            :src="logoImage"
+            alt="Nature en Voyage"
+            class="h-12 w-12 rounded-md bg-white object-contain p-1 shadow-sm"
+          />
           <span>
             <span class="block text-sm font-bold">Nature en Voyage</span>
             <span class="block text-xs text-stone-300">Location tourisme Madagascar</span>
@@ -989,18 +995,18 @@ const submitBooking = () => {
 
           <div class="rounded-lg border border-stone-300 bg-white p-5 shadow-sm">
             <a
-              href="tel:+261341234567"
+              href="tel:+261349852252"
               class="focus-ring flex items-center gap-3 rounded-md border border-stone-200 px-4 py-3 font-bold hover:bg-stone-50"
             >
               <Phone class="h-5 w-5 text-canopy" aria-hidden="true" />
-              +261 34 12 345 67
+              +261 34 98 522 52
             </a>
             <a
-              href="mailto:booking@natureenvoyage.mg"
+              href="mailto:natureenvoyage@gmail.com"
               class="focus-ring mt-3 flex items-center gap-3 rounded-md border border-stone-200 px-4 py-3 font-bold hover:bg-stone-50"
             >
               <Mail class="h-5 w-5 text-clay" aria-hidden="true" />
-              booking@natureenvoyage.mg
+              natureenvoyage@gmail.com
             </a>
             <a
               :href="whatsappUrl"
@@ -1018,7 +1024,7 @@ const submitBooking = () => {
 
     <footer class="bg-ink py-8 text-sm text-stone-300">
       <div class="section-shell flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <p>© 2026 Nature en Voyage. Prototype Vue + Tailwind.</p>
+        <p>© 2026 Nature en Voyage.</p>
         <p>
           Sources destinations :
           <a class="underline hover:text-white" href="https://madagascar-tourisme.com/" target="_blank" rel="noreferrer">
@@ -1028,7 +1034,7 @@ const submitBooking = () => {
           <a class="underline hover:text-white" href="https://parcs-madagascar.com/" target="_blank" rel="noreferrer">
             Madagascar National Parks
           </a>
-          · Images via Wikimedia Commons.
+          .
         </p>
       </div>
     </footer>
