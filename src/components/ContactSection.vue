@@ -7,7 +7,7 @@ const { t, pick } = useI18n()
 const { buildBookingMessage } = useBooking()
 
 const whatsappUrl = () =>
-  `https://wa.me/261349852252?text=${encodeURIComponent(
+  `https://wa.me/261380769499?text=${encodeURIComponent(
     `Bonjour, je souhaite reserver un trajet avec Nature en Voyage.\n\n${buildBookingMessage(t, pick)}`,
   )}`
 </script>
@@ -23,11 +23,11 @@ const whatsappUrl = () =>
 
       <div class="rounded-lg border border-stone-300 bg-white p-5 shadow-sm">
         <a
-          href="tel:+261349852252"
+          href="tel:+261380769499"
           class="focus-ring flex items-center gap-3 rounded-md border border-stone-200 px-4 py-3 font-bold hover:bg-stone-50"
         >
           <Phone class="h-5 w-5 text-canopy" aria-hidden="true" />
-          +261 34 98 522 52
+          +261 38 07 69 499
         </a>
         <a
           href="mailto:natureenvoyage@gmail.com"

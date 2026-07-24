@@ -30,7 +30,7 @@ onMounted(() => {
 const today = new Date().toISOString().slice(0, 10)
 
 const whatsappUrl = () =>
-  `https://wa.me/261349852252?text=${encodeURIComponent(
+  `https://wa.me/261380769499?text=${encodeURIComponent(
     `Bonjour, je souhaite reserver un trajet avec Nature en Voyage.\n\n${buildBookingMessage(t, pick)}`,
   )}`
 

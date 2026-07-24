@@ -7,7 +7,7 @@ const { t, pick } = useI18n()
 const { buildBookingMessage } = useBooking()
 
 const whatsappUrl = () =>
-  `https://wa.me/261349852252?text=${encodeURIComponent(
+  `https://wa.me/261380769499?text=${encodeURIComponent(
     `Bonjour, je souhaite planifier un voyage avec Nature en Voyage.\n\n${buildBookingMessage(t, pick)}`,
   )}`
 </script>
