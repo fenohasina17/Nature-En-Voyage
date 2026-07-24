@@ -4,7 +4,7 @@
 
 :root {
   color: #17211d;
-  background: #f7f5ef;
+  background: #f3ecdd;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -12,6 +12,20 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Keeps anchor-jumped sections (#booking, #axes...) from hiding under the fixed header. */
+[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+html,
+body {
+  /* Guards against any descendant (long text, an animated transform, a flex
+     item that refuses to shrink) quietly forcing the page wider than the
+     viewport on narrow phones — a very common source of a "dead" horizontal
+     gap on iOS WebKit specifically. */
+  overflow-x: hidden;
 }
 
 body {
@@ -44,4 +58,64 @@ img {
 
 .section-shell {
   @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Serves a lighter image on small screens and the full-size one from 768px up,
+   so phones on an average connection don't pay for desktop-sized bytes. */
+.hero-bg {
+  background-image: var(--hero-bg-mobile);
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    background-image: var(--hero-bg-desktop);
+  }
+}
+
+/* Keeps content clear of the fixed mobile action bar and the iPhone home indicator. */
+.mobile-bar-spacer {
+  height: calc(5.5rem + env(safe-area-inset-bottom));
+}
+
+.mobile-bar {
+  /* env(safe-area-inset-bottom) is 0 on most non-notched phones and in most
+     emulators, so a max() guarantees the buttons always sit clear of the
+     screen edge instead of being flush against it. */
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Unifies the inconsistent white balance/contrast across photos pulled from many
+   different Wikimedia Commons contributors, so the gallery reads as one shoot. */
+.photo {
+  filter: saturate(1.08) contrast(1.04) sepia(0.05);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ken-burns {
+    animation: ken-burns 24s ease-in-out infinite alternate;
+  }
+
+  .reveal-up {
+    animation: reveal-up 0.7s ease-out both;
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

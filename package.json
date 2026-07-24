@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "generate:seed": "node scripts/generate-seed-sql.mjs > supabase/seed.sql"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.110.8",
     "lucide-vue-next": "^0.468.0",
     "vue": "^3.5.13"
   },

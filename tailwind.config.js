@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{vue,js}'],
+  content: ['./index.html', './admin.html', './src/**/*.{vue,js}'],
   theme: {
     extend: {
       colors: {
@@ -9,6 +9,12 @@ export default {
         lagoon: '#0f766e',
         ember: '#c9892b',
         ink: '#17211d',
+        sand: '#f3ecdd',
+        dusk: '#1b2a41',
+        orchid: '#c9738a',
+      },
+      fontFamily: {
+        display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
       },
       boxShadow: {
         crisp: '0 16px 40px rgba(23, 33, 29, 0.12)',
