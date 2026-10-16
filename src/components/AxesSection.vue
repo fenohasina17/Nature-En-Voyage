@@ -59,7 +59,7 @@ const googleMapsUrl = (site) => `https://www.google.com/maps/search/?api=1&query
         </button>
       </div>
 
-      <div v-if="currentAxis" class="mb-8 rounded-lg border border-stone-200 bg-[#fbfaf6] p-5">
+      <div v-if="currentAxis" class="mb-8 rounded-2xl border border-stone-200 bg-[#fbfaf6] p-5">
         <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h3 class="text-2xl font-black">{{ pick(currentAxis.title) }}</h3>
@@ -87,7 +87,7 @@ const googleMapsUrl = (site) => `https://www.google.com/maps/search/?api=1&query
         <article
           v-for="site in filteredSites"
           :key="site.id"
-          class="overflow-hidden rounded-lg border border-stone-200 bg-[#fbfaf6] shadow-sm"
+          class="overflow-hidden rounded-2xl border border-stone-200 bg-[#fbfaf6] shadow-sm"
         >
           <img
             v-if="site.image"

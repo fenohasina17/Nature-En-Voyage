@@ -49,7 +49,7 @@ const filteredVehicles = computed(() => {
         <article
           v-for="vehicle in filteredVehicles"
           :key="vehicle.id"
-          class="overflow-hidden rounded-lg border border-stone-200 bg-[#fbfaf6] shadow-sm"
+          class="overflow-hidden rounded-2xl border border-stone-200 bg-[#fbfaf6] shadow-sm"
         >
           <img
             v-if="vehicle.image"

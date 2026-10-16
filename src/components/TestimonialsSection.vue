@@ -38,7 +38,7 @@ const testimonials = [
 </script>
 
 <template>
-  <section class="bg-ink py-16 text-white">
+  <section class="grain bg-ink py-16 text-white">
     <div class="section-shell">
       <div class="mb-10 max-w-2xl">
         <p class="text-sm font-bold uppercase text-ember">{{ t('testimonials.kicker') }}</p>
@@ -49,7 +49,7 @@ const testimonials = [
         <article
           v-for="item in testimonials"
           :key="item.initials"
-          class="reveal-up rounded-lg border border-white/10 bg-white/5 p-6"
+          class="reveal-up rounded-2xl border border-white/10 bg-white/5 p-6"
         >
           <Quote class="h-6 w-6 text-ember" aria-hidden="true" />
           <p class="mt-4 text-sm leading-7 text-stone-100">{{ isFr ? item.quote.fr : item.quote.en }}</p>

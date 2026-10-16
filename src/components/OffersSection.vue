@@ -75,7 +75,7 @@ const offers = [
         <article
           v-for="offer in offers"
           :key="offer.title.fr"
-          class="rounded-lg border border-stone-200 bg-[#fbfaf6] p-5 shadow-sm"
+          class="rounded-2xl border border-stone-200 bg-[#fbfaf6] p-5 shadow-sm"
         >
           <component :is="offer.icon" class="h-8 w-8 text-clay" aria-hidden="true" />
           <h3 class="mt-4 text-xl font-black">{{ pick(offer.title) }}</h3>
@@ -93,7 +93,7 @@ const offers = [
             v-for="axis in axes"
             :key="axis.key"
             href="#axes"
-            class="focus-ring rounded-lg border border-stone-200 bg-ink p-5 text-white shadow-sm transition hover:border-ember"
+            class="focus-ring rounded-2xl border border-stone-200 bg-ink p-5 text-white shadow-sm transition hover:border-ember"
           >
             <p class="text-sm font-bold text-ember">{{ pick(axis.road) }}</p>
             <h4 class="mt-2 text-lg font-black leading-tight">{{ pick(axis.title) }}</h4>

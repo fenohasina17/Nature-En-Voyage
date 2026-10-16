@@ -21,7 +21,7 @@ const items = [
       </div>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <div v-for="item in items" :key="item.titleKey" class="rounded-lg border border-stone-200 bg-[#fbfaf6] p-5">
+        <div v-for="item in items" :key="item.titleKey" class="rounded-2xl border border-stone-200 bg-[#fbfaf6] p-5">
           <component :is="item.icon" class="h-8 w-8 text-canopy" aria-hidden="true" />
           <h3 class="mt-4 text-lg font-black">{{ t(item.titleKey) }}</h3>
           <p class="mt-3 text-sm leading-6 text-stone-700">{{ t(item.textKey) }}</p>

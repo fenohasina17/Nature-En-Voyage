@@ -5,7 +5,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <footer class="bg-ink py-8 text-sm text-stone-300">
+  <footer class="grain bg-ink py-8 text-sm text-stone-300">
     <div class="section-shell flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
       <p>© 2026 {{ t('footer.rights') }}</p>
       <p>

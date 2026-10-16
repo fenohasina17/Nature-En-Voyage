@@ -50,7 +50,7 @@ const mailUrl = () =>
         </p>
       </div>
 
-      <div class="rounded-lg bg-white p-4 text-ink shadow-crisp sm:p-6">
+      <div class="rounded-2xl bg-white p-4 text-ink shadow-crisp sm:p-6">
         <div class="mb-5 flex items-start justify-between gap-4">
           <h3 class="text-xl font-black">{{ t('bookingForm.title') }}</h3>
           <span class="rounded bg-stone-100 px-2 py-1 text-xs font-bold text-stone-700">

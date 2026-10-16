@@ -21,7 +21,7 @@ const whatsappUrl = () =>
         <p class="mt-4 max-w-2xl leading-7 text-stone-700">{{ t('contact.subtitle') }}</p>
       </div>
 
-      <div class="rounded-lg border border-stone-300 bg-white p-5 shadow-sm">
+      <div class="rounded-2xl border border-stone-300 bg-white p-5 shadow-sm">
         <a
           href="tel:+261380769499"
           class="focus-ring flex items-center gap-3 rounded-md border border-stone-200 px-4 py-3 font-bold hover:bg-stone-50"
